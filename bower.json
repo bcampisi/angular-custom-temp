@@ -1,0 +1,37 @@
+{
+  "name": "vendors",
+  "description": "This is my angular template for angular 1.5 apps",
+  "main": "",
+  "authors": [
+    "brian@codersdream.com"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "angular-animate": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "oclazyload": "~1.0.9",
+    "animate.css": "~3.4.0",
+    "sweetalert": "~1.1.3",
+    "bootstrap": "~3.3.6",
+    "bootstrap-sweetalert": "~0.4.5",
+    "jquery": "~2.1.4",
+    "classie": "~1.0.1",
+    "font-awesome": "~4.5.0",
+    "Waves": "waves#~0.7.4",
+    "material-shadows": "~2.0.2",
+    "material-design-iconic-font": "~2.2.0"
+  }
+}
