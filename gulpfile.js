@@ -8,19 +8,21 @@ var less = require('gulp-less');
 var ngTemplates = require('gulp-ng-templates');
 var minifyCSS = require('gulp-minify-css');
 var htmlmin = require('gulp-htmlmin');
-var clean = require('gulp-clean');
+var del = require('del');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
 // cleanup tasks
 gulp.task('clean-temps', function () {
-    return gulp.src('js/templates.min.js', {read: false})
-        .pipe(clean());
+    return del([
+        'js/templates.min.js'
+    ]);
 });
 gulp.task('clean-dist', function () {
-    return gulp.src('dist/*.js', {read: false})
-        .pipe(clean());
+    return del([
+        'dist/*.js'
+    ]);
 });
 
 // Lint Task
@@ -36,7 +38,7 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'inc') ]
     }))
-    //.pipe(minifyCSS())
+    .pipe(minifyCSS())  //comment out to not minify the css
     .pipe(gulp.dest('./css'));
 });
 // Compile Our Sass (if using sass uncomment below section and comment out less section above)
